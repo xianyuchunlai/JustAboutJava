@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示和隐藏</title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height:100px;
+            background-color: red;
+            display: inline-block;
+            /*
+            inline表示行内
+            block表示块状
+            这里就是:
+            内联块状元素
+            也就是说,可以使用display
+            将元素的种类更改
+            */
+        }
+    </style>
+</head>
+<body>
+<h1 id="text">知己者不尤人,知命者不怨天</h1>
+<button id="btn" onclick="btnClicked2()">隐藏</button>
+    <!--<button id="btn1" onclick="btnClicked()">显示<button>-->
+    <div></div>
+    <div></div>
+</body>
+<script type="text/javascript">
+    function btnClicked() {
+        var text = document.getElementById("text");
+        if(display!="none"){
+            text.style.display="none";
+        }else{
+            text.style.display="block";
+        }
+
+    }
+    // 需求:如果显示,点击隐藏,如果隐藏,点击显示
+    // 如果为block,则显示(block就表示块级)
+    //    function btnClickeds() {
+    //        var text = document.getElementById("text");
+    //        text.style.display="block";
+    //    }
+    function btnClicked2() {
+        var text = document.getElementById("text");
+        // 只是让元素不再显示,但是元素依然占据位置
+        if(text.style.visibility != "hidden"){
+            text.style.visibility = "hidden";
+        }else{
+            text.style.visibility = "visible";
+        }
+    }
+</script>
+<html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进入与移出</title>
+</head>
+<body>
+<!--
+需求：
+图标进入img标签，显示图片a
+图标移出img标签，显示图片b
+-->
+
+<!--
+    事件
+    监听器
+    事件源(this 就是事件源)
+    谁导致事件的发生，谁就是源
+    或者事件在哪儿发生的，哪儿就是源
+
+    可以在onxxx等监听器中，通过this，
+    改变当前元素的属性值
+-->
+<img src="img/c.gif"
+     onmouseover="this.src='img/b.gif'"
+     onmouseout="this.src='img/a.gif'">
+</body>
+</html>
