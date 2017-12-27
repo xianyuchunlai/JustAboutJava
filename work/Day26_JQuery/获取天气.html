@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取天气</title>
+    <script src="JS/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <button id="btn">点击获取天气</button>
+    <h1 id="time"></h1>
+    <h1 id ="type"></h1>
+</body>
+<script type="text/javascript">
+    function btClicked() {
+        $.getJSON("http://www.sojson.com/open/api/weather/json.shtml?city=武汉",
+            function (jsonData) {
+                var time=jsonData['date'];
+                var type=jsonData['type'];
+            })
+    }
+    $('#btn').click(btClicked);
+</script>
+</html>
