@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script SRC="JS/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+        #to {
+            background-color: cyan;
+            width: 500px;
+            height: 50px;
+            margin: 5px;
+        }
+
+        #to > button {
+            color: brown;
+            border-radius: 20px;
+            margin: 10px;
+        }
+        /*#sb{*/
+            /*width: 500px;*/
+            /*margin: 0px;*/
+        /*}*/
+        /*div{text-align:center}*/
+
+    </style>
+</head>
+<body>
+
+<div id="to">
+    <button id="add">添加</button>
+    <button id="delete">删除</button>
+    <button id="btn2">小于0</button>
+    <button id="ii">大于0</button>
+    <button id="flash">刷新</button>
+    <button id="all">显示全部</button>
+</div>
+
+<!--<div id="div1"></div>-->
+
+</body>
+<script type="text/javascript">
+    $('#add').click(function () {
+        $('#to').append($('<div>').css({"height":"50px",
+                "margin":"5px",
+                "width":"500px",
+//            "margin":"0",
+//                "backgroundColor":"red"
+            "backgroundColor":getRandomColor,
+            "text-align":"center",
+            "fontSize":"30px"
+        }).append(getNum())
+        )
+    });
+
+
+    $('#delete').click(function () {
+        $('div:last-child').animate({"marginLeft":"800px"},800,function () {
+            $(this).remove()
+        })
+    });
+
+    $('#btn2').click(function () {
+        $('#to>div').each(function () {
+            var text = $(this).text();
+//            console.log(text);
+            if(text >=0){
+                $(this).css({"display":"none"});
+            }else {
+                $(this).css({"display":"block"})
+            }
+
+        })
+    });
+
+    $('#ii').click(function () {
+        $('#to>div').each(function () {
+            var text = $(this).text();
+            if (text<=0){
+                $(this).css({"display":"none"})
+            }else {
+                $(this).css({"display":"block"})
+            }
+
+        })
+    });
+
+    $('#flash').click(function () {
+
+
+            $('#to>div').css({"backgroundColor":getRandomColor}).text(getNum)
+    });
+
+    $('#all').click(function () {
+        $('#to>div').css({"display":"block"});
+    })
+
+    function getRandomColor() {
+        var c = '#';
+        var cArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+        for (var i = 0; i < 6; i++) {
+            var cIndex = Math.round(Math.random() * 15);
+            c += cArray[cIndex];
+        }
+        return c;
+    }
+
+
+    function getNum() {
+        var Range =50 - (-50);
+        var Rand = Math.random();
+        var num = (-50) +Math.round(Rand * Range);
+        return num;
+    }
+
+
+
+</script>
+</html>

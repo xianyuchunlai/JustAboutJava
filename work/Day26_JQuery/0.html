@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+        button{
+            width: 80px;
+            height: 40px;
+        }
+        #first{
+            background: white;
+            border: solid 1px;
+            margin: 5px;
+            width: 550px;
+            text-align: center;
+        }
+        #text{
+            background: cadetblue;
+            width: 550px;
+            margin: 5px;
+            border: solid 1px;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+<div id="first">
+    <button id="add">添加<tton>
+        <button id="delete">删除<tton>
+            <button id="right">大于0<tton>
+                <button id="left">小于0<tton>
+                    <button id="res">刷新<tton>
+                        <button id="all">显示全部<tton>
+</div>
+
+
+<div id="text"></div>
+
+</body>
+<script type="text/javascript">
+    $('#add').click(function () {
+        $('#text').append($('<p>').css({"height":"40px"}).css("background",getRandomColor));
+    })
+    $('#delete').click(function () {
+        $('p').remove()
+    })
+    $('#right').click(function () {
+        $('#text').append($('<p>').css())
+    })
+    $('#left').click(function () {
+        $('#text').append()
+    })
+    $('#res').click(function () {
+        $('#text').remove()
+    })
+    $('#all').click(function () {
+        $('#text').remove()
+    })
+
+
+
+
+</script>
+
+</html>

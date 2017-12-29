@@ -6,18 +6,37 @@
     <script src="JS/jquery-3.2.1.min.js"></script>
 </head>
 <body>
+
     <button id="btn">点击获取天气</button>
-    <h1 id="time"></h1>
-    <h1 id ="type"></h1>
+    <!--<h1 id="time"></h1>-->
+    <!--<h1 id ="type"></h1>-->
+<div></div>
 </body>
 <script type="text/javascript">
     function btClicked() {
-        $.getJSON("http://www.sojson.com/open/api/weather/json.shtml?city=武汉",
-            function (jsonData) {
-                var time=jsonData['date'];
-                var type=jsonData['type'];
+        $.getJSON({url : "http://api.k780.com/?app=weather.today&weaid=wuhan&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json&jsoncallback=?",
+                dataType : "jsonp",
+                type:"Post",
+                jsonpCallback: "jsonpCallback"},
+            function (data,status) {
+                console.log(status);
+                console.log(data);
+                $.each(data,function (i,data) {
+                        $('div').text("city : "+data['citynm'] + "\nweather : "+data['weather']+"天气"+data["temperature"])
+                    }
+                )
             })
     }
+
     $('#btn').click(btClicked);
+
+    //    function btClicked() {
+//        $.getJSON("http://www.sojson.com/open/api/weather/json.shtml?city=武汉",
+//            function (jsonData) {
+//                var time=jsonData['date'];
+//                var type=jsonData['type'];
+//            })
+//    }
+//
 </script>
 </html>

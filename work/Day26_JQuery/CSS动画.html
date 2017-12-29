@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="JS/jquery-3.2.1.min.js"></script>
+    <style>
+
+        .div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: width 2s;
+            margin: 20px;
+        }
+
+        .div:nth-last-of-type(1){
+            transition: width 2s ease;
+
+        }
+
+        .div:nth-last-of-type(2){
+            transition: width 2s linear;
+
+        }
+
+        .div:nth-last-of-type(3){
+            transition: width 2s linear 2s;
+
+        }
+
+        .div:nth-last-of-type(4){
+            transition: width 2s linear
+                 ,height 2s linear 2s;
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="div"></div>
+<div class="div">
+
+</div><div class="div">
+
+</div><div class="div">
+
+</div><div class="div"></div>
+<button id ="btn">点击</button>
+</body>
+<script type="text/javascript">
+    $("div").click(function () {
+        $(".div").css({"height":"60px",
+            "width":"500px"}
+
+        )
+    })
+</script>
+</html>
