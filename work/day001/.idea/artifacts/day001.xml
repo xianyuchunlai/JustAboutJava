@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="day001">
+    <output-path>$PROJECT_DIR$/out/artifacts/day001</output-path>
+    <root id="archive" name="day001.war">
+      <element id="artifact" artifact-name="day001:war exploded" />
+      <element id="module-output" name="day001" />
+    </root>
+  </artifact>
+</component>
