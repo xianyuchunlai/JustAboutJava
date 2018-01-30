@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="static" extends="struts-default">
+        <action name="static" class="action.StaticParamAction">
+            <!--直接定义在配置文件中的参数
+            称为静态参数
+            只要action类中,有对应的set方法
+            struts2就能帮我们直接将参数设置进去-->
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+
+            <result name="success">index.jsp</result>
+
+        </action>
+        <action name="active" class="action.ActiveParamAction">
+            <result name="success">index.jsp</result>
+        </action>
+
+    </package>
+
+
+</struts>

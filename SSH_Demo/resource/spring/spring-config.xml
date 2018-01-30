@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations"
+                  value="jdbcinfo.properties"/>
+    </bean>
+
+
+    <bean id="datasource"
+          class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="jdbcUrl"
+                  value="${jdbc.url}"/>
+
+        <property name="driverClass"
+                  value="${jdbc.driver}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+    <property name="dataSource" ref="datasource"/>
+    <property name="hibernateProperties">
+        <props>
+            <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+            <prop key="hibernate.show_sql">true</prop>
+            <prop key="format_sql">true</prop>
+        </props>
+    </property>
+    <property name="mappingLocations"
+              value="classpath:com/lanou3g/staff/domain/*.hbm.xml"/>
+    
+</bean>
+
+<bean id="txManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+    <property name="sessionFactory" ref="sessionFactory"/>
+</bean>
+
+
+
+      <tx:advice id="txAdvice" transaction-manager="txManager">
+
+        <tx:attributes>
+
+            <tx:method name="add*" />
+            <tx:method name="update*"/>
+            <tx:method name="delete*" read-only="true"/>
+            <tx:method name="find*" read-only="true"/>
+
+        </tx:attributes>
+
+    </tx:advice>
+
+
+
+    <aop:config>
+        <aop:pointcut id="operateTransaction" expression="execution(* com.lanou3g.staff.dao.*Impl.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="operateTransaction"/>
+    </aop:config>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

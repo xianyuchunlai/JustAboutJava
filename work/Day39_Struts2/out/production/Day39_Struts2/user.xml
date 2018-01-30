@@ -1,0 +1,38 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+    <package name="user"
+             extends="struts-default"
+             namespace="/user">
+
+        <action name="add"
+                class="UserAction"
+                method="add">
+            <result name="add">add.jsp</result>
+        </action>
+        
+        
+        <action name="delete"
+                class="UserAction"
+                method="delete">
+            <result name="delete">delete.jsp</result>
+        </action>
+
+        <action name="modify"
+                class="UserAction"
+                method="modify">
+            <result name="modify">modify.jsp</result>
+        </action>
+
+        <!--http://localhost:8080/user/query33-->
+        <action name="query33"
+                class="UserAction"
+                method="query33">
+            <result name="queryOK">query66.jsp</result>
+        </action>
+
+    </package>
+
+</struts>

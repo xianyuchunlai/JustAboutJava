@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="car" class="com.lanou3g.di.Car">
+        <constructor-arg name="name"
+                         value="辉腾"/>
+    </bean>
+
+    <bean name="car001" class="com.lanou3g.di.Car">
+        <constructor-arg name="name" value="秋名山之神车之五菱宏光"/>
+
+    </bean>
+
+    <bean name="car002" class="com.lanou3g.di.Car">
+        <constructor-arg name="name" value="梅赛德斯"/>
+
+    </bean>
+
+    <bean name="car003" class="com.lanou3g.di.Car">
+        <constructor-arg name="name" value="奥迪双钻"/>
+
+    </bean>
+
+    <bean name="car004" class="com.lanou3g.di.Car">
+        <constructor-arg name="name" value="金杯"/>
+
+    </bean>
+
+    <bean id="per" class="com.lanou3g.di.Person">
+        <constructor-arg name="name"
+                         value="PGOne"/>
+
+        <constructor-arg name="car"
+                         ref="car"/>
+
+    </bean>
+
+    <bean id="per01" class="com.lanou3g.di.Person">
+        <property name="name" value="陈艹熊"/>
+        <property name="age" value="18"/>
+        <property name="gender" value="female"/>
+    </bean>
+
+    <bean id="per02" class="com.lanou3g.di.Person">
+        <property name="name" value="陈找熊"/>
+        <property name="age" value="28"/>
+        <property name="gender" value="male"/>
+        <property name="car" ref="car001"/>
+    </bean>
+
+    <bean id="per03" class="com.lanou3g.di.Person">
+        <property name="name" value="曾找熊"/>
+        <property name="age" value="28"/>
+        <property name="gender" value="male"/>
+        <property name="car" ref="car"/>
+        <property name="list">
+            <list>
+                <value>list</value>
+                <ref bean="car001"/>
+                <ref bean="car"/>
+            </list>
+        </property>
+
+
+    </bean>
+
+    <bean id="per04" class="com.lanou3g.di.Person">
+        <property name="name" value="张三丰"/>
+        <property name="age" value="155"/>
+        <property name="gender" value="male"/>
+        <property name="car" ref="car"/>
+        <property name="list">
+            <list>
+                <value>list</value>
+                <ref bean="car001"/>
+                <ref bean="car"/>
+                <ref bean="car002"/>
+            </list>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>set</value>
+                <ref bean="car002"/>
+                <ref bean="car003"/>
+            </set>
+        </property>
+
+
+    </bean>
+
+ <bean id="per05" class="com.lanou3g.di.Person">
+        <property name="name" value="陈朝雄"/>
+        <property name="age" value="155"/>
+        <property name="gender" value="male"/>
+        <property name="car" ref="car"/>
+
+        <property name="list">
+            <list>
+                <value>list</value>
+                <ref bean="car001"/>
+                <ref bean="car"/>
+                <ref bean="car002"/>
+            </list>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>set</value>
+                <ref bean="car002"/>
+                <ref bean="car003"/>
+            </set>
+        </property>
+
+
+
+
+     <property name="properties">
+         <props>
+             <prop key="p1">pp1</prop>
+             <prop key="p2">pp2</prop>
+         </props>
+     </property>
+
+     <property name="objects">
+         <list>
+             <value>objects</value>
+             <ref bean="car003"/>
+         </list>
+     </property>
+
+
+
+    </bean>
+
+    <bean id="per06" class="com.lanou3g.di.Person">
+        <property name="name" value="superman"/>
+        <property name="age" value="155"/>
+        <property name="gender" value="male"/>
+        <property name="car" ref="car"/>
+
+        <property name="list">
+            <list>
+                <value>list</value>
+                <ref bean="car001"/>
+                <ref bean="car"/>
+                <ref bean="car002"/>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>set</value>
+                <ref bean="car002"/>
+                <ref bean="car003"/>
+            </set>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="p1">pp1</prop>
+                <prop key="p2">pp2</prop>
+            </props>
+        </property>
+        <property name="objects">
+            <list>
+                <value>objects</value>
+                <ref bean="car003"/>
+            </list>
+        </property>
+
+      <property name="map">
+          <map>
+              <entry key="66">
+                  <value>map集合</value>
+              </entry>
+
+              <entry key="67">
+                  <ref bean="car004"/>
+              </entry>
+          </map>
+      </property>
+
+        <!--<property name="map2">-->
+        <!--<map>-->
+        <!--<entry key="m1">-->
+        <!--<value>map集合</value>-->
+        <!--</entry>-->
+            <!---->
+        <!--<entry key="m2">-->
+        <!--<ref bean="car"/>-->
+        <!--</entry>-->
+        <!--</map>-->
+        <!--</property>-->
+
+
+
+
+
+    </bean>
+
+
+</beans>

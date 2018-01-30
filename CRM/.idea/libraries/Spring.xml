@@ -1,0 +1,40 @@
+<component name="libraryTable">
+  <library name="Spring" type="spring">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/antlr-2.7.7.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/aspectjrt.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/aspectjweaver.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/classmate-1.3.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/commons-fileupload-1.3.2.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/commons-io-2.4.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/commons-lang3-3.4.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/commons-logging-1.2.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/dom4j-1.6.1.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/freemarker-2.3.23.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/geronimo-jta_1.1_spec-1.1.1.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/hibernate-commons-annotations-5.0.1.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/hibernate-core-5.1.5.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/hibernate-jpa-2.1-api-1.0.0.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/jandex-2.0.3.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/javassist-3.20.0-GA.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/jboss-logging-3.3.0.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/log4j-api-2.7.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/ognl-3.1.12.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/spring-aop-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/spring-beans-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/spring-context-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/spring-core-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/spring-expression-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/spring-jdbc-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/spring-orm-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/spring-tx-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/spring-web-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/struts2-core-2.5.10.1.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/SSH整合架包/struts2-spring-plugin-2.5.10.1.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/jstl标签库/standard.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/架包/jstl标签库/jstl-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--
+        2018-1-23 09:08:52
+        如想使用注解
+        则必须要在配置文件中添加下面这句话
+        context====>是一个命名空间
+        写了后,会在<beans>标签添加一个属性
+        xmlns:context=....
+        还会在xsi.schemaLocation
+        后面的字符串中添加一些内容
+    -->
+
+    <!--
+        2018-1-23 09:12:51
+        下面这个标签:扫描
+        表示要扫描哪些包 ,获取该包被注解标识的bean
+    -->
+    <context:component-scan
+            base-package="com.lanou3g.annotation"/>
+
+    <bean id="people" class="com.lanou3g.annotation.People">
+        <property name="name" value="id=people"/>
+    </bean>
+
+
+    <!--
+            2018-1-23 10:42:05
+            指定student这个bean的父bean是people
+            而people这个bean,已经被赋值了name为 id=people
+            所以在此获得student时,就输出name了
+    -->
+    <bean id="student"
+          parent="people"
+          class="com.lanou3g.annotation.Student">
+        <!--<property name="name" value="id=student"/>-->
+    </bean>
+</beans>

@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="JS_AJXl:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/JS_AJXl_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="JS_AJXl/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JS_AJXl" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="json-lib-2.4-jdk15" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
